@@ -5,7 +5,6 @@ import java.util.logging.Level;
 
 import cpw.mods.fml.common.FMLLog;
 
-import mint.mintmats.common.blocks.blockIDs;
 import net.minecraftforge.common.Configuration;
 import static net.minecraftforge.common.Configuration.*;
 
