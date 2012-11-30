@@ -1,19 +1,18 @@
 package mint.mintmats.common.blocks;
 
 import java.util.List;
-import java.util.Random;
 
+import cpw.mods.fml.common.Side;
+import cpw.mods.fml.common.asm.SideOnly;
 import net.minecraft.src.Block;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.Material;
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
 
-public class blockMudBrick extends Block
+public class blockCustomEndStone extends Block
 {
 
-	public blockMudBrick(int par1, int par2)
+	public blockCustomEndStone(int par1, int par2)
     {
         super(par1, par2, Material.rock);
         this.setCreativeTab(CreativeTabs.tabBlock);
@@ -25,15 +24,17 @@ public class blockMudBrick extends Block
     	switch (par2) 
     	{
     	case 0:
-    		return 2;
+    		return 6;
     	case 1:
-    		return 3;
+    		return 7;
     	case 2:
-    		return 4;
+    		return 8;
     	case 3:
-    		return 5;
+    		return 9;
+    	case 4:
+    		return 10;
     	default:
-    		return 0;
+    		return 6;
     	}
     }
     
@@ -50,7 +51,7 @@ public class blockMudBrick extends Block
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        for (int var4 = 0; var4 < 4; ++var4)
+        for (int var4 = 0; var4 < 5; ++var4)
         {
             par3List.add(new ItemStack(par1, 1, var4));
         }

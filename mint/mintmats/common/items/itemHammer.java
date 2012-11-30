@@ -1,5 +1,6 @@
 package mint.mintmats.common.items;
 
+import mint.mintmats.common.core.configurationHelper;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
@@ -12,23 +13,23 @@ public class itemHammer extends Item
         super(i);
         maxStackSize = 1;
         this.setCreativeTab(CreativeTabs.tabTools);
-        setMaxDamage(64);
+        setMaxDamage(configurationHelper.toolDurability);
     }
     public boolean isDamagable(ItemStack itemStack)
     {
     	return true;
     }
 	
-    @Override
+
     public boolean doesContainerItemLeaveCraftingGrid(ItemStack itemStack)
     {
     	return false;
     }
     
-    @Override
+
     public boolean getShareTag(){ return true;}
     
-    @Override
+
     public ItemStack getContainerItemStack(ItemStack itemStack)
     {
     	itemStack.setItemDamage(itemStack.getItemDamage() + 1);

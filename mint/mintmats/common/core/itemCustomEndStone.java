@@ -4,9 +4,9 @@ import net.minecraft.src.Block;
 import net.minecraft.src.ItemBlock;
 import net.minecraft.src.ItemStack;
 
-public class itemEndStoneBrick extends ItemBlock
+public class itemCustomEndStone extends ItemBlock
 {
-	public itemEndStoneBrick(int par1, Block block) 
+	public itemCustomEndStone(int par1, Block block) 
 	{
 		super(par1);
 		setHasSubtypes(true);
@@ -14,13 +14,15 @@ public class itemEndStoneBrick extends ItemBlock
 
 	public String getItemNameIS(ItemStack itemstack) 
 	{
-		String name = "endBrick";
+		String name = "customEndStone";
 		switch(itemstack.getItemDamage()) 
 		{
 			case 0: {name = "smooth"; break;}
-			case 1: {name = "mossy"; break;}
-			case 2: {name = "cracked"; break;}
-			default: name = "endBrick";
+			case 1: {name = "brick"; break;}
+			case 2: {name = "mossy"; break;}
+			case 3: {name = "cracked"; break;}
+			case 4: {name = "chiseled"; break;}
+			default: name = "smooth";
 		}
 		return getItemName() + "." + name;
 	}

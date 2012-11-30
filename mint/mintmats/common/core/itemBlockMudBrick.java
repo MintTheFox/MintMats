@@ -6,7 +6,7 @@ import net.minecraft.src.ItemStack;
 
 public class itemBlockMudBrick extends ItemBlock
 {
-	public itemBlockMudBrick(int par1, Block block) 
+	public itemBlockMudBrick(int par1, Block block)
 	{
 		super(par1);
 		setHasSubtypes(true);
@@ -20,7 +20,8 @@ public class itemBlockMudBrick extends ItemBlock
 			case 0: {name = "smooth"; break;}
 			case 1: {name = "mossy"; break;}
 			case 2: {name = "cracked"; break;}
-			default: name = "mudBrick";
+			case 3: {name = "chisled"; break;}
+			default: name = "smooth";
 		}
 		return getItemName() + "." + name;
 	}

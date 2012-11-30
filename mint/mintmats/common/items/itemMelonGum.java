@@ -14,6 +14,7 @@ public class itemMelonGum extends ItemFood
         super(par1, par2, par3, par4);
         this.setMaxStackSize(64);
         this.setCreativeTab(CreativeTabs.tabFood);
+        setHasSubtypes(true);
     }
 	
     @SideOnly(Side.CLIENT)
@@ -24,6 +25,6 @@ public class itemMelonGum extends ItemFood
 
     public String getTextureFile()
     {
-            return "/mint/mintmats/common/items/items.png";
+    	return "/mint/mintmats/common/items/items.png";
     }
 }

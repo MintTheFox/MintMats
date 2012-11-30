@@ -5,16 +5,17 @@ import java.util.List;
 import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.asm.SideOnly;
 import net.minecraft.src.Block;
+import net.minecraft.src.BlockFence;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.Material;
 
-public class blockEndStoneBrick extends Block
+public class blockCustomFence extends BlockFence
 {
 
-	public blockEndStoneBrick(int par1, int par2)
-    {
-        super(par1, par2, Material.rock);
+	public blockCustomFence(int par1, int par2)
+	{
+		super(par1, par2);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.setRequiresSelfNotify();
     }
@@ -29,8 +30,12 @@ public class blockEndStoneBrick extends Block
     		return 7;
     	case 2:
     		return 8;
+    	case 3:
+    		return 9;
+    	case 4:
+    		return 10;
     	default:
-    		return 0;
+    		return 6;
     	}
     }
     
@@ -47,7 +52,7 @@ public class blockEndStoneBrick extends Block
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        for (int var4 = 0; var4 < 3; ++var4)
+        for (int var4 = 0; var4 < 4; ++var4)
         {
             par3List.add(new ItemStack(par1, 1, var4));
         }
